@@ -1,3 +1,3 @@
-This project captures video frames and enables the segmentation of the foreground subject from the background. 
+The purpose of this project is to remove background/camera motion from active video shots in order to segment a foreground subject from the background for further analysis (e.g., machine learning). It employs feature point detection (feature tracking) and RANSAC to determine the homography between adjacent frames in order to transform each frame into the same projective plane as a chosen reference frame. This process results in the description of the camera's motion in the shot which is then in effect removed. A mosaic (panorama) image is composed from the transformed (warped) frames creating a static background. This static background now enables the segmentation of the foreground subject from the background through background subtraction. 
 
-It requires a folder containing the video frames that you would like to transform into a mosaic for the static background.
+The individual frames from the video must be in a designated folder.  Transformation is then performed using the captured individual frames.
